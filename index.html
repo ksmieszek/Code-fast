@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="programowanie, pisanie, kodowanie">
+        <meta name="description" content="Strona ma na celu zwiększenie twojej szybkości pisania kodu.">
+        <title>Code Fast</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+        <link rel="shortcut icon" href="src/icons/favicon.png" type="image/x-icon" />
+    </head>
+    <body>
+        <div  class="overlay"></div>
+        <div class="modal" id="languages">
+            <div class="modal__header">
+                <h3 class="modal__header--title">Pick languages</h3>
+                <button data-close-button class="modal__header--close">
+                    &times;
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="languages">
+                    <input type="checkbox" id="html">
+                    <label for="html" class="language">HTML</label>
+                    <input type="checkbox" id="css">
+                    <label for="css" class="language">CSS </label>
+                    <input type="checkbox" id="js"> 
+                    <label for="js" class="language">JS</label>
+                    <input type="checkbox" id="php">
+                    <label for="php" class="language">PHP</label>
+                    <input type="checkbox" id="cSharp">
+                    <label for="cSharp" class="language">C#</label>
+                    <input type="checkbox" id="java">
+                    <label for="java" class="language">JAVA</label>
+                </form>
+            </div>
+            <div class="modal__footer">
+                <input type="submit" class="button--save" value="Save">
+            </div>
+        </div>
+        <div class="modal" id="timer">
+            <div class="modal__header">
+                <h3 class="modal__header--title">Set timer</h3>
+                <button data-close-button class="modal__header--close">
+                    &times;
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="timer">
+                    <label for="timer__slider" class="timer__block">Time to write in minutes: </label>
+                    <input type="range" id="timer__slider" min="1" max="5" >
+                </form>
+            </div>
+            <div class="modal__footer">
+                <input type="submit" class="timer__button--save button--save" value="Save">
+            </div>
+        </div>
+        <div class="container">
+            <header class='header'>
+                <nav class="header__nav">
+                    <a href="index.html" class="header__logo">
+                            <p>Code</p>
+                            <p>fast</p>
+                    </a>
+                    <div class="header__option"><a href="dashboard.html">Dashboard</a></div>
+                </nav>
+            </header>
+            <main class="main">
+                <div class="app">
+                    <div class="app__controls">
+                        <div class="configuration__language" data-modal-target="#languages">
+                            <p>Set language</p>
+                            <svg viewBox="0 0 471.362 471.362" class="configuration--svg">
+                                <path d="M468.794,355.171c-1.707-1.718-3.897-2.57-6.563-2.57H188.145c-2.664,0-4.854,0.853-6.567,2.57
+                                    c-1.711,1.711-2.565,3.897-2.565,6.563v18.274c0,2.662,0.854,4.853,2.565,6.563c1.713,1.712,3.903,2.57,6.567,2.57h274.086
+                                    c2.666,0,4.856-0.858,6.563-2.57c1.711-1.711,2.567-3.901,2.567-6.563v-18.274C471.365,359.068,470.513,356.882,468.794,355.171z" />
+                                <path  d="M30.259,85.075c-1.903-1.903-4.093-2.856-6.567-2.856s-4.661,0.953-6.563,2.856L2.852,99.353
+                                    C0.95,101.255,0,103.442,0,105.918c0,2.478,0.95,4.664,2.852,6.567L115.06,224.69L2.852,336.896C0.95,338.799,0,340.989,0,343.46
+                                    c0,2.478,0.95,4.665,2.852,6.567l14.276,14.273c1.903,1.906,4.089,2.854,6.563,2.854s4.665-0.951,6.567-2.854l133.048-133.045
+                                    c1.903-1.902,2.853-4.096,2.853-6.57c0-2.473-0.95-4.663-2.853-6.565L30.259,85.075z" />
+                             </svg>
+                        </div>
+                        <div class="configuration__timer" data-modal-target="#timer">
+                            <p>Set timer</p>
+                            <svg viewBox="0 0 296.228 296.228" class="configuration--svg">
+                                <path d="m167.364,48.003v-23.003h10.5c6.903,0 12.5-5.597 12.5-12.5s-5.596-12.5-12.5-12.5h-59.5c-6.903,0-12.5,5.597-12.5,12.5s5.597,12.5 12.5,12.5h10.5v23.003c-59.738,9.285-105.604,61.071-105.604,123.37-3.55271e-15,68.845 56.01,124.854 124.854,124.854s124.854-56.01 124.854-124.854c0-62.299-45.866-114.085-105.604-123.37zm-19.25,223.225c-55.06,0-99.854-44.795-99.854-99.854s44.795-99.854 99.854-99.854 99.854,44.795 99.854,99.854-44.794,99.854-99.854,99.854z" />
+                                <path d="m160.614,166.18v-58.889c0-6.903-5.597-12.5-12.5-12.5s-12.5,5.597-12.5,12.5v66.1c0,2.033 0.81,3.982 2.25,5.416l34.969,34.822c4.893,4.872 12.806,4.854 17.678-0.037 4.871-4.892 4.854-12.807-0.037-17.678l-29.86-29.734z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="app__wrapper">
+                        <div class="app__liveStats">
+                            <div class="liveStats__accuracy">Accuracy 0.00%</div>
+                            <div class="liveStats__wpm">WPM 0.00</div>
+                        </div>
+                        <div class="app__output"></div>
+                        <input class="app__input" type="text" />
+                        <div id="time__left--slider"></div>
+                    </div>
+                    <div class="summary">
+                        <div class="score">
+                            <div class="score__title">Summary</div>
+                            <div class="score__label">
+                                <div>Typed</div>
+                                <div>WPM</div>
+                                <div>Mistyped</div>
+                                <div>Accuracy</div>
+                            </div>
+                            <div class="score__values">
+                                <div class="typed"> </div>
+                                <div class="wpm"> </div>
+                                <div class="mistyped"> </div>
+                                <div class="accuracy"> </div>
+                            </div>
+                        </div>
+                        <div class="restart--message">
+                            <p>Try again</p>
+                            <div class="restart--sign">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="src/js/words.js"></script>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
